@@ -1,4 +1,4 @@
-package org.pearson.util;
+package org.open.util;
 
 import java.util.ArrayList;
 import java.util.Collection;

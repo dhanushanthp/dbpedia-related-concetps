@@ -1,7 +1,7 @@
 package org.open.query;
 
 import java.util.Collection;
-import org.pearson.util.QueryUtil;
+import org.open.util.QueryUtil;
 
 public class KnownPhraseRelations {
 public Collection<String> getRelations(String input){

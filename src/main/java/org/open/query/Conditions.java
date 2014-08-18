@@ -1,6 +1,6 @@
 package org.open.query;
 
-import org.pearson.util.WordCustomizeUtil;
+import org.open.util.WordCustomizeUtil;
 
 public class Conditions {
 	public static final String PREFIX = "PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>\n"+

@@ -1,4 +1,4 @@
-package org.pearson.util;
+package org.open.util;
 
 public class WordCustomizeUtil {
 	/**
