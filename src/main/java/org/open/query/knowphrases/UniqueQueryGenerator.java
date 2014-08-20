@@ -1,4 +1,4 @@
-package org.open.query;
+package org.open.query.knowphrases;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -7,12 +7,12 @@ import java.util.Properties;
 
 import org.open.util.WordCustomizeUtil;
 
-public class RelationGenerator {
+public class UniqueQueryGenerator {
 	Properties data = new Properties();
 	final String SUBJECT = "getSubject";
 	final String OBJECT = "result";
 	
-	public RelationGenerator(){
+	public UniqueQueryGenerator(){
 		try {
 			InputStream file = new FileInputStream("relation.properties");
 			data.load(file);
@@ -61,6 +61,7 @@ public class RelationGenerator {
 	 * @param object
 	 * @return
 	 */
+	//TODO Here the arrayout of bound exception need to be fixed
 	private StringBuffer buildQuery(String subject , String predicate,String[] relations,String object) {
 		StringBuffer output = new StringBuffer();
 		if (relations.length > 1) {

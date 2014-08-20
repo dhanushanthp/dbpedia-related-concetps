@@ -1,8 +1,11 @@
 dbpedia-related-concetps
 ========================
-This application has been developed to find the relation words for searched word.
+This application has been developed to find the meaning full related phrases.
+
 **For example:**
-*If you search for obama that will return, **
+
+*If you search for* **obama** *the result will be, *
+
 - President of the United States
 - Member of the Illinois Senate
 - Author
@@ -22,4 +25,11 @@ This application has been developed to find the relation words for searched word
 - Dreams from My Father
 - The Audacity of Hope
 
-So the result that has been given contain occupation, status, books written by him, etc. The samle test file has been added to test the appliation
+So the result that has been given contain occupation, status, books written by him, etc. The sample test file has been added to test the application.
+
+Installation
+--------------
+
+git clone [url]
+
+*go to project folder and :* mvn install

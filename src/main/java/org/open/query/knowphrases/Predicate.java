@@ -1,4 +1,4 @@
-package org.open.query;
+package org.open.query.knowphrases;
 
 public interface Predicate {
 	String DBPEDIA_OWL = "dbpedia-owl";

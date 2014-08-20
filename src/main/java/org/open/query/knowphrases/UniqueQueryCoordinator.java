@@ -1,9 +1,9 @@
-package org.open.query;
+package org.open.query.knowphrases;
 
 import org.open.util.WordCustomizeUtil;
 
-public class Conditions {
-	public static RelationGenerator rg = new RelationGenerator();
+public class UniqueQueryCoordinator {
+	public static UniqueQueryGenerator rg = new UniqueQueryGenerator();
 	public static final String PREFIX = "PREFIX dbpedia-owl: <http://dbpedia.org/ontology/> "+
 			"PREFIX dbpedia: <http://dbpedia.org/resource/> "+
 			"PREFIX cata: <http://dbpedia.org/resource/Category:> "+
