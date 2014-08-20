@@ -1,8 +1,8 @@
 dbpedia-related-concetps
 ========================
 This application has been developed to find the relation words for searched word.
-For example:
-If you search for obama that will return, 
+**For example:**
+*If you search for obama that will return, **
 - President of the United States
 - Member of the Illinois Senate
 - Author
