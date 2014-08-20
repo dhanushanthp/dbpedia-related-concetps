@@ -8,7 +8,6 @@ public class WordCustomizeUtil {
 	 * @return result returns the String value which is supported by DBpedia
 	 */
 	public static String addUnderscore(String input){
-		//String result = WordUtils.capitalize(input);
 		String result = input.substring(0, 1).toUpperCase() + input.substring(1).toLowerCase();
 		result = result.replaceAll(" ", "_");
 		return result;
@@ -19,4 +18,9 @@ public class WordCustomizeUtil {
 		result = result.replaceAll("_", " ");
 		return result;
 	} 
+	
+	public static String[] getRelations(String input){
+		String [] listOfRelations =input.split(",");
+		return listOfRelations;
+	}
 }
