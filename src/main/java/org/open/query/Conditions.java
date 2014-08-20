@@ -36,10 +36,10 @@ public class Conditions {
 			" }";
 
 
-	public static final String FILTER = " BIND(REPLACE(str(?result), \"http://dbpedia.org/resource/\", \"\") AS ?output1) .\n"+
-			" BIND(REPLACE(str(?output1), \"Category:\", \"\") AS ?output) .\n"+
-			" FILTER(!REGEX(?output, \"[\\\\d]\",\"i\" )) .\n"+
-			" FILTER(!REGEX(?output, \"-\",\"i\" )) .\n"+
-			" FILTER(!REGEX(?output, \"\\\\(\",\"i\" )) .\n"+
-			" FILTER(!REGEX(?output, \"\\\\)\",\"i\" )) .\n";
+	public static final String FILTER = " BIND(REPLACE(str(?result), \"http://dbpedia.org/resource/\", \"\") AS ?tmp) ."+
+			" BIND(REPLACE(str(?tmp), \"Category:\", \"\") AS ?output) ."+
+			" FILTER(!REGEX(?output, \"[\\\\d]\",\"i\" )) ."+
+			" FILTER(!REGEX(?output, \"-\",\"i\" )) ."+
+			" FILTER(!REGEX(?output, \"\\\\(\",\"i\" )) ."+
+			" FILTER(!REGEX(?output, \"\\\\)\",\"i\" )) .";
 }

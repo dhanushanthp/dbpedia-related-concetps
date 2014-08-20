@@ -1,7 +1,6 @@
 package org.open.query;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
@@ -10,6 +9,9 @@ import org.open.util.WordCustomizeUtil;
 
 public class RelationGenerator {
 	Properties data = new Properties();
+	final String SUBJECT = "getSubject";
+	final String OBJECT = "result";
+	
 	public RelationGenerator(){
 		try {
 			InputStream file = new FileInputStream("relation.properties");
@@ -21,38 +23,38 @@ public class RelationGenerator {
 	}
 	public StringBuffer getOwl() throws ArrayIndexOutOfBoundsException {
 		String [] relations = WordCustomizeUtil.getRelations(data.getProperty("dbpedia-owl"));
-		StringBuffer output = buildQuery("getSubject","dbpedia-owl",relations,"result");
+		StringBuffer output = buildQuery(SUBJECT,Predicate.DBPEDIA_OWL,relations,OBJECT);
 		return output;
 	}
 	
 	public StringBuffer getProp() throws ArrayIndexOutOfBoundsException {
 		String [] relations = WordCustomizeUtil.getRelations(data.getProperty("dbpprop"));
-		StringBuffer output = buildQuery("getSubject","dbpprop",relations,"result");
+		StringBuffer output = buildQuery(SUBJECT,Predicate.DBBPROP,relations,OBJECT);
 		return output;
 	}
 	
 	public StringBuffer getOwlOf() throws ArrayIndexOutOfBoundsException {
 		String [] relations = WordCustomizeUtil.getRelations(data.getProperty("dbpeida-owl-of"));
-		StringBuffer output = buildQuery("result","dbpedia-owl",relations,"getSubject");
+		StringBuffer output = buildQuery(OBJECT,Predicate.DBPEDIA_OWL,relations,SUBJECT);
 		return output;
 	}
 	
 	public StringBuffer getPropOf() throws ArrayIndexOutOfBoundsException {
 		String [] relations = WordCustomizeUtil.getRelations(data.getProperty("dbpprop-of"));
-		StringBuffer output = buildQuery("result","dbpprop",relations,"getSubject");
+		StringBuffer output = buildQuery(OBJECT,Predicate.DBBPROP,relations,SUBJECT);
 		return output;
 	}
 																																																																			
 	public StringBuffer getFoaf() throws ArrayIndexOutOfBoundsException {
 		String [] relations = WordCustomizeUtil.getRelations(data.getProperty("foaf"));
-		StringBuffer output = buildQuery("getSubject","foaf",relations,"result");
+		StringBuffer output = buildQuery(SUBJECT,Predicate.FOAF,relations,OBJECT);
 		return output;
 	}
 	
 	/**
 	 * Get the subject from predicate where we are search using object. So the sample 
 	 * Query will be like.
-	 * >{?subject predicate: relation ?object}
+	 * {?subject predicate: relation ?object}
 	 * @param subject
 	 * @param predicate
 	 * @param relations
