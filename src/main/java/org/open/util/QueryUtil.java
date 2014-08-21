@@ -2,6 +2,7 @@ package org.open.util;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashSet;
 
 import com.hp.hpl.jena.query.QueryExecution;
 import com.hp.hpl.jena.query.QueryExecutionFactory;
@@ -11,7 +12,7 @@ import com.hp.hpl.jena.query.ResultSet;
 public class QueryUtil {
 	
 	public static Collection<String> jenaQuery(String query,String resultString,String URL) {
-		Collection<String> result = new ArrayList<String>();
+		Collection<String> result = new HashSet<String>();
 		String service = URL + "/sparql";
 		QueryExecution qe = QueryExecutionFactory.sparqlService(service, query);
 				

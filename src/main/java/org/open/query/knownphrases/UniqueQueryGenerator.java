@@ -1,4 +1,4 @@
-package org.open.query.knowphrases;
+package org.open.query.knownphrases;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -9,7 +9,7 @@ import org.open.util.WordCustomizeUtil;
 
 public class UniqueQueryGenerator {
 	Properties data = new Properties();
-	final String SUBJECT = "getSubject";
+	final String SUBJECT = "subject";
 	final String OBJECT = "result";
 	
 	public UniqueQueryGenerator(){
@@ -17,7 +17,7 @@ public class UniqueQueryGenerator {
 			InputStream file = new FileInputStream("relation.properties");
 			data.load(file);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			System.out.println("Your relation.properties file is missing.");
 			e.printStackTrace();
 		}
 	}
