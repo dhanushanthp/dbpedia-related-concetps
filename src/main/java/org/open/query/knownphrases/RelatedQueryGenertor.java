@@ -6,7 +6,7 @@ import org.open.util.QueryUtil;
 import org.open.util.WordCustomizeUtil;
 import org.open.query.ChiefCoordinator;;
 
-public class RelatedPhraseGenertor {
+public class RelatedQueryGenertor {
 public Collection<String> getRelations(String input){
 	UniqueQueryCoordinator uqc = new UniqueQueryCoordinator();
 	input = WordCustomizeUtil.addUnderscore(input);

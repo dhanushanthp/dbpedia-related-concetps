@@ -3,12 +3,12 @@ package org.open.query;
 import java.io.IOException;
 import java.util.Collection;
 
-import org.open.query.knownphrases.RelatedPhraseGenertor;
+import org.open.query.knownphrases.RelatedQueryGenertor;
 
 public class KnownPhraseRelationsTest {
 
 	public static void main(String[] args) throws IOException {
-		RelatedPhraseGenertor kpr = new RelatedPhraseGenertor();
+		RelatedQueryGenertor kpr = new RelatedQueryGenertor();
 		long start = System.currentTimeMillis();
 		String per = "abdul kalam";
 		String con = "india";

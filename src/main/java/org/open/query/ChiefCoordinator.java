@@ -1,6 +1,10 @@
 package org.open.query;
 
 public interface ChiefCoordinator {
+	String DBPEDIA_OWL = "dbpedia-owl";
+	String DBBPROP = "dbpprop";
+	String FOAF = "foaf";
+	
 	String FILTER_KNOWN = " FILTER(!REGEX(?output, \"[\\\\d]\",\"i\" )) ."+
 			" FILTER(!REGEX(?output, \"-\",\"i\" )) ."+
 			" FILTER(!REGEX(?output, \"\\\\(\",\"i\" )) ."+

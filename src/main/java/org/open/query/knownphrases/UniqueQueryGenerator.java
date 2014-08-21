@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
+import org.open.query.ChiefCoordinator;
 import org.open.util.WordCustomizeUtil;
 
 public class UniqueQueryGenerator {
@@ -23,31 +24,31 @@ public class UniqueQueryGenerator {
 	}
 	public StringBuffer getOwl() throws ArrayIndexOutOfBoundsException {
 		String [] relations = WordCustomizeUtil.getRelations(data.getProperty("dbpedia-owl"));
-		StringBuffer output = buildQuery(SUBJECT,Predicate.DBPEDIA_OWL,relations,OBJECT);
+		StringBuffer output = buildQuery(SUBJECT,ChiefCoordinator.DBPEDIA_OWL,relations,OBJECT);
 		return output;
 	}
 	
 	public StringBuffer getProp() throws ArrayIndexOutOfBoundsException {
 		String [] relations = WordCustomizeUtil.getRelations(data.getProperty("dbpprop"));
-		StringBuffer output = buildQuery(SUBJECT,Predicate.DBBPROP,relations,OBJECT);
+		StringBuffer output = buildQuery(SUBJECT,ChiefCoordinator.DBBPROP,relations,OBJECT);
 		return output;
 	}
 	
 	public StringBuffer getOwlOf() throws ArrayIndexOutOfBoundsException {
 		String [] relations = WordCustomizeUtil.getRelations(data.getProperty("dbpeida-owl-of"));
-		StringBuffer output = buildQuery(OBJECT,Predicate.DBPEDIA_OWL,relations,SUBJECT);
+		StringBuffer output = buildQuery(OBJECT,ChiefCoordinator.DBPEDIA_OWL,relations,SUBJECT);
 		return output;
 	}
 	
 	public StringBuffer getPropOf() throws ArrayIndexOutOfBoundsException {
 		String [] relations = WordCustomizeUtil.getRelations(data.getProperty("dbpprop-of"));
-		StringBuffer output = buildQuery(OBJECT,Predicate.DBBPROP,relations,SUBJECT);
+		StringBuffer output = buildQuery(OBJECT,ChiefCoordinator.DBBPROP,relations,SUBJECT);
 		return output;
 	}
 																																																																			
 	public StringBuffer getFoaf() throws ArrayIndexOutOfBoundsException {
 		String [] relations = WordCustomizeUtil.getRelations(data.getProperty("foaf"));
-		StringBuffer output = buildQuery(SUBJECT,Predicate.FOAF,relations,OBJECT);
+		StringBuffer output = buildQuery(SUBJECT,ChiefCoordinator.FOAF,relations,OBJECT);
 		return output;
 	}
 	
