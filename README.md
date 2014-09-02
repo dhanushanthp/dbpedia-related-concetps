@@ -29,7 +29,20 @@ So the result that has been given contain occupation, status, books written by h
 
 Installation
 --------------
+####Create db-conf folder in /opt directory
+```sh
+mkdir /opt/db-conf
+chmod 777 /opt/db-conf
+```
 
+Move the ```relation.properties``` file to ```/opt/db-donf ``` folder
+
+####Set the db-conf folder as a  classpath.
+```sh
+export CLASSPATH=$CLASSPATH:/opt/db-cong
+```
 git clone [url]
 
-*go to project folder and :* mvn install
+*go to project folder and :* 
+``` mvn install
+```

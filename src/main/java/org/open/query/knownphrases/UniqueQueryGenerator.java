@@ -15,7 +15,7 @@ public class UniqueQueryGenerator {
 	
 	public UniqueQueryGenerator(){
 		try {
-			InputStream file = new FileInputStream("relation.properties");
+			InputStream file = UniqueQueryGenerator.class.getClassLoader().getResourceAsStream("relation.properties");
 			data.load(file);
 		} catch (IOException e) {
 			System.out.println("Your relation.properties file is missing.");
