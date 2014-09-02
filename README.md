@@ -39,10 +39,9 @@ Move the ```relation.properties``` file to ```/opt/db-donf ``` folder
 
 ####Set the db-conf folder as a  classpath.
 ```sh
-export CLASSPATH=$CLASSPATH:/opt/db-cong
+export CLASSPATH=$CLASSPATH:/opt/db-conf
 ```
 git clone [url]
 
 *go to project folder and :* 
-``` mvn install
-```
+``` mvn install ```

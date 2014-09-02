@@ -1,6 +1,5 @@
 package org.open.query.knownphrases;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
@@ -62,7 +61,6 @@ public class UniqueQueryGenerator {
 	 * @param object
 	 * @return
 	 */
-	//TODO Here the arrayout of bound exception need to be fixed
 	private StringBuffer buildQuery(String subject , String predicate,String[] relations,String object) {
 		StringBuffer output = new StringBuffer();
 		if (relations.length > 1) {

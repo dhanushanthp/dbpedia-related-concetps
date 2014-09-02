@@ -4,7 +4,7 @@ import org.open.query.ChiefCoordinator;
 import org.open.util.WordCustomizeUtil;
 
 public class UniqueQueryCoordinator implements ChiefCoordinator{
-	public static UniqueQueryGenerator rg = new UniqueQueryGenerator();
+	public static UniqueQueryGenerator uqg = new UniqueQueryGenerator();
 	
 	@Override
 	public String getStemming(String phrase){
@@ -19,15 +19,15 @@ public class UniqueQueryCoordinator implements ChiefCoordinator{
 	}
 	
 	public final String QUERY = " {"+
-			rg.getOwl()+
+			uqg.getOwl()+
 			" UNION "+
-			rg.getProp()+
+			uqg.getProp()+
 			" UNION "+
-			rg.getFoaf()+
+			uqg.getFoaf()+
 			" UNION "+
-			rg.getPropOf() +
+			uqg.getPropOf() +
 			" UNION "+
-			rg.getOwlOf() +
+			uqg.getOwlOf() +
 			" }";
 
 
